@@ -1,0 +1,31 @@
+/* ======================
+  1 Базовые настройки
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  font-weight: 700;
+  background: #fff;
+  color: #fff;
+}
+
+/* так как button по умолчанию не наследует шрифт */
+button {
+  font-family: inherit;
+}
+
+/* ======================
+  2 Контейнер (ограничение ширины и отступы)
+========================= */
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 530px;
+}
+
+
