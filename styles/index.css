@@ -10,7 +10,6 @@ body {
   width: 100%;
   font-weight: 700;
   background: #fff;
-  color: #fff;
 }
 
 /* так как button по умолчанию не наследует шрифт */
@@ -27,5 +26,112 @@ button {
   margin: 0 auto;
   max-width: 530px;
 }
+/* ====================== */
+.counter {
+  padding-top: 126px;
+  padding-bottom: 20px;
+  /* padding-bottom: 206px; */
+}
 
+.counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
 
+.counter__number {
+  font-size: 32px;
+  line-height: 44px;
+  color: #000;
+}
+
+.counter-btn {
+  display: block;
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.counter-btn_blue {
+  background-color: #4191ff;
+}
+
+.counter-btn_red {
+  background-color: #d45366;
+}
+
+/* адаптив - tablet */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* адаптив - mobile */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .counter {
+    padding-top: 80px;
+  }
+
+  .counter-wrapper {
+    gap: 24px;
+  }
+
+  .counter__number {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .counter-btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    line-height: 32px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .counter {
+    padding-top: 60px; 
+  }
+
+  .counter-wrapper {
+    gap: 20px;
+  }
+
+  .counter__number {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .counter-btn {
+    padding-top: 16px; 
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    border-radius: 14px;
+  }
+}
