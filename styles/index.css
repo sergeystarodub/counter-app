@@ -58,6 +58,9 @@ button {
   line-height: 44px;
   color: #fff;
   cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  /* чтобы при нажатии на планшете и телефоне не подсвечивалось синим */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .counter-btn_blue {
@@ -67,6 +70,30 @@ button {
 .counter-btn_red {
   background-color: #d45366;
 }
+
+/* Эффект для синей кнопки */
+.counter-btn_blue:hover {
+  background-color: #2a7be6; /* Чуть темнее базового #4191ff */
+}
+
+/* Эффект для красной кнопки */
+.counter-btn_red:hover {
+  background-color: #b84052; /* Чуть темнее базового #d45366 */
+}
+
+/* Эффект для синей кнопки при нажатии */
+.counter-btn_blue:active {
+  background-color: #1b63c4; /* Еще темнее, чем при hover */
+  transform: scale(0.98);    /* Сжимаем кнопку на 2%, создавая эффект глубины */
+}
+
+/* Эффект для красной кнопки при нажатии */
+.counter-btn_red:active {
+  background-color: #9c2e40;  /* Еще темнее, чем при hover */
+  transform: scale(0.98);    /* Сжимаем кнопку на 2% */
+}
+
+
 
 /* адаптив - tablet */
 @media (max-width: 1199px) {
