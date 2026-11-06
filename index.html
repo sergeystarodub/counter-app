@@ -20,9 +20,10 @@
       <section class="counter">
         <div class="container">
           <div class="counter-wrapper">
-            <p class="counter__number">0</p>
-            <button class="js-btn-setup counter-btn counter-btn_blue">+1 Бассейн</button>
-            <button class="js-btn-reset counter-btn counter-btn_red">Сбросить</button>
+            <p data-find="counterNumber" class="counter__number"></p>
+            <button id="onePoolButtonSetup" data-pools="1" class="counter-btn counter-btn_blue">+1 Бассейн</button>
+            <button id="twoPoolButtonSetup" data-pools="2" class="counter-btn counter-btn_blue">+2 Бассейн</button>
+            <button id="resetButton" class="counter-btn counter-btn_red">Сбросить</button>
           </div>
 
         </div>

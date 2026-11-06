@@ -15,6 +15,7 @@ body {
 /* так как button по умолчанию не наследует шрифт */
 button {
   font-family: inherit;
+  font-weight: 700;
 }
 
 /* ======================
