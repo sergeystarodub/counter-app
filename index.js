@@ -31,6 +31,7 @@ resetButton.addEventListener('click', function() {
 
 }); */
 
+/* ============================================== */
 // 2-й вариант с функцией
 
 /* const COUNTER_INITIAL_VALUE = 0;
@@ -61,23 +62,25 @@ function setupButton(poolButton, valueElement) {
 });
 } */
 
+/* ============================================== */
 // 3-й вариант - обработка коллекции кнопок через forEach и вызов для каждой из них функции
 
 const COUNTER_INITIAL_VALUE = 0;
 
 let counter = COUNTER_INITIAL_VALUE;
-counterNumber.textContent = counter;
+//counterNumber.textContent = counter;
+render();
 
 //получение всех кнопок у которых есть атрибут data-pools
 
-poolButtons = document.querySelectorAll('[data-pools]');
+const poolButtons = document.querySelectorAll('[data-pools]');
 
 //выбор каждой кнопки и вызов для них функции setupButton - onePoolButton и twoPoolButton здесь больше не нужны
 //Если добавить третью кнопку - javaScript автоматически найдёт её. 
 // не придётся отдельно получать её через getElementById() и вызывать для неё setupButton()
 
 poolButtons.forEach(function(button) {
-    setupButton(button, counterNumber);
+    setupButton(button);
     
 });
 
@@ -86,16 +89,25 @@ poolButtons.forEach(function(button) {
 resetButton.addEventListener('click', function() {
     counter = COUNTER_INITIAL_VALUE;
 
-    counterNumber.textContent = counter;
+    //counterNumber.textContent = counter;
+    render();
 
 });
 
+// создаем функцию рендера - функция отрисовки
+function render() {
+    // использую textContent вместо innerText/innerHTML, 
+    // потому что это безопаснее (защита от XSS) и быстрее.
+    counterNumber.textContent = counter;
+    
+}
 
-function setupButton(poolButton, valueElement) {
+// функция увеличения счетчика по нажатию кнопок
+function setupButton(poolButton) {
     poolButton.addEventListener('click', function() {
     counter += parseInt(poolButton.dataset.pools);
 
-    valueElement.textContent = counter;
+    render();
 });
 }
 
