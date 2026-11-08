@@ -47,8 +47,8 @@ button {
   color: #000;
 }
 
-.counter-btn {
-  display: block;
+.counter__btn {
+  /* display: block; */
   width: 100%;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -64,37 +64,41 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.counter-btn_blue {
+.counter__btn_blue {
   background-color: #4191ff;
 }
 
-.counter-btn_red {
+.counter__btn_red {
   background-color: #d45366;
 }
 
 /* Эффект для синей кнопки */
-.counter-btn_blue:hover {
+.counter__btn_blue:hover {
   background-color: #2a7be6; /* Чуть темнее базового #4191ff */
 }
 
 /* Эффект для красной кнопки */
-.counter-btn_red:hover {
+.counter__btn_red:hover {
   background-color: #b84052; /* Чуть темнее базового #d45366 */
 }
 
 /* Эффект для синей кнопки при нажатии */
-.counter-btn_blue:active {
+.counter__btn_blue:active {
   background-color: #1b63c4; /* Еще темнее, чем при hover */
   transform: scale(0.98);    /* Сжимаем кнопку на 2%, создавая эффект глубины */
 }
 
 /* Эффект для красной кнопки при нажатии */
-.counter-btn_red:active {
+.counter__btn_red:active {
   background-color: #9c2e40;  /* Еще темнее, чем при hover */
   transform: scale(0.98);    /* Сжимаем кнопку на 2% */
 }
 
-
+/* Это позволит видеть клавиатурный фокус при переходе между кнопками с помощью клавиши Tab */
+.counter__btn:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 4px;
+}
 
 /* адаптив - tablet */
 @media (max-width: 1199px) {
@@ -128,7 +132,7 @@ button {
     line-height: 56px;
   }
 
-  .counter-btn {
+  .counter__btn {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 24px;
@@ -155,7 +159,7 @@ button {
     line-height: 48px;
   }
 
-  .counter-btn {
+  .counter__btn {
     padding-top: 16px; 
     padding-bottom: 16px;
     font-size: 20px;
